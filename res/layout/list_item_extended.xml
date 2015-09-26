@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2014 Kartik Sharma
+ 
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+       http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.ksharkapps.musicnow"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/item_normal_height"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/item_normal_height"
+    android:paddingRight="@dimen/list_preferred_item_padding" >
+
+    <com.ksharkapps.musicnow.widgets.SquareView
+        android:id="@+id/square_view"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="8dp" >
+
+        <com.ksharkapps.musicnow.widgets.SquareImageView
+            android:id="@+id/image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/header_temp" />
+    </com.ksharkapps.musicnow.widgets.SquareView>
+
+    <TextView
+        android:id="@+id/line_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/line_one_right"
+        android:layout_toRightOf="@id/square_view"
+        android:ellipsize="end"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_medium"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/line_one_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:paddingRight="@dimen/list_preferred_item_padding"
+        android:singleLine="true"
+        android:textColor="@color/bab_line_two"
+        android:textSize="@dimen/text_size_small" />
+
+    <TextView
+        android:id="@+id/line_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_one"
+        android:layout_marginTop="@dimen/list_item_line_two_margin_top"
+        android:layout_toRightOf="@id/square_view"
+        android:ellipsize="end"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/line_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@id/square_view"
+        android:ellipsize="end"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_small" />
+
+</RelativeLayout>

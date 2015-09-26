@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2014 Kartik Sharma
+ 
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+ 
+       http://www.apache.org/licenses/LICENSE-2.0
+ 
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <!-- UI catetgory -->
+    <PreferenceCategory android:title="@string/settings_ui_category" >
+        
+        <com.ksharkapps.musicnow.ui.widgets.ColorPreference
+            android:defaultValue="@color/actionbar_color"
+            android:dialogTitle="@string/pref_foreground_color_title"
+            android:key="actionBarColor"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:summary="@string/pref_foreground_color_description"
+            android:title="@string/pref_foreground_color_title"
+            app:itemLayout="@layout/pref_layout_color"
+            app:numColumns="5" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="translucentMode"
+            android:title="@string/pref_translucent_mode" />
+
+    <!--    <MultiSelectListPreference
+            android:capitalize="words"
+            android:defaultValue="@array/page_titles"
+            android:dialogTitle="@string/tab_visibility_title"
+            android:entries="@array/page_titles"
+            android:entryValues="@array/page_titles"
+            android:key="@string/key_tabs_enabled"
+            android:summary="@string/tab_visibility_summary"
+            android:title="@string/tab_visibility_title" />  --> 
+        
+        
+    </PreferenceCategory>
+    <!-- Data catetory -->
+    <PreferenceCategory android:title="@string/settings_data_category" >
+
+        <!-- Only on Wi-Fi -->
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="only_on_wifi"
+            android:summary="@string/settings_download_only_on_wifi_summary"
+            android:title="@string/settings_download_only_on_wifi_title" />
+        <!-- Missing artwork -->
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="download_missing_artwork"
+            android:title="@string/settings_download_missing_artwork_title" />
+        <!-- Missing artist images -->
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="download_missing_artist_images"
+            android:title="@string/settings_download_artist_images_title" />
+    </PreferenceCategory>
+    <!-- Storage catetory -->
+    <PreferenceCategory android:title="@string/settings_storage_category" >
+
+        <!-- Delete cache -->
+        <Preference
+            android:key="delete_cache"
+            android:summary="@string/settings_delete_cache_summary"
+            android:title="@string/settings_delete_cache_title" />
+    </PreferenceCategory>
+    <!-- About -->
+    <PreferenceCategory android:title="@string/settings_about_category" >
+        <PreferenceScreen android:title="@string/settings_about_music_now" >
+            <PreferenceCategory android:title="@string/settings_about_category" >
+                <Preference
+                    android:summary="@string/settings_self_title"
+                    android:title="@string/settings_author_title" />
+                <Preference
+                    android:key="version"
+                    android:title="@string/settings_version_title" />
+                <Preference
+                    android:key="open_source"
+                    android:title="@string/settings_open_source_licenses" />
+            </PreferenceCategory>
+            
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>
